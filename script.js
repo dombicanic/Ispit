@@ -10,10 +10,10 @@ searchInput.addEventListener("keyup", () => {
   }
 });
 
-async function searchapp(query) {
+async function searchapp(girls) {
   try {
     const response = await fetch(
-      `https://api.tvmaze.com/search/shows?q=${query}`
+      `https://api.tvmaze.com/search/shows?q=${girls}`
     );
     const data = await response.json();
     displayResults(data);
